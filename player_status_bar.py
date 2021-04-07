@@ -18,9 +18,9 @@ class PlayerStatusBar(tk.Frame):
 
     def _create_widgets(self):
         current_row = 0
-        self._player_label = tk.Label(self, width=11, text=self._player_label_str, font=(None, 14), fg="white",
+        self._player_label = tk.Label(self, width=14, text=self._player_label_str, font=(None, 13), fg="white",
                                       bg=self._player.get_colour(), borderwidth=4, relief="groove")
-        self._player_label.grid(row=current_row, column=0, columnspan=5, padx=10, sticky="W"+"E")
+        self._player_label.grid(row=current_row, column=0, columnspan=5, padx=5, sticky="W"+"E")
         current_row += 1
         self._hq_icon_label = tk.Label(self, image=self._icon_image_dict["hq"]["map"])
         self._hq_icon_label.grid(row=current_row, column=0, sticky="E")

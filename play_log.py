@@ -5,7 +5,7 @@
 import tkinter as tk
 from log_line import LogLine
 
-DISPLAY_SIZE = 20
+DISPLAY_SIZE = 25
 
 
 # Valid keywords: player1, player2, hex1, hex2, squad1, squad2, turn_num, victor
@@ -44,7 +44,7 @@ class PlayLog(tk.Frame):
         if len(self._display_log) > DISPLAY_SIZE:
             self._display_log[0].destroy()
             del self._display_log[0]
-        self._display_log.append(tk.Label(self, text=self._log_list[-1].get_text_log(), width=45, anchor="w", wraplength=500))
+        self._display_log.append(tk.Label(self, text=self._log_list[-1].get_text_log(), width=50, anchor="w", wraplength=500))
         if self._log_list[-1].get_log_type() == "new_turn":
             self._display_log[-1].config(font=(None, 10, "bold"))
         self._display_log[-1].pack(fill="both")
